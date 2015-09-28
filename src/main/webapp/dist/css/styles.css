@@ -28,6 +28,13 @@
 	border-radius: 8px;
 }
 
+.mytable
+{
+	padding-bottom: 70px;
+	margin:0 auto;
+	width: 1000px;
+}
+
 .affiche
 {
 	padding-top: 30px;
@@ -173,6 +180,12 @@
  
  .lyrics-in-center
 {
+	align:center;
+}
+.incenter
+{
+	display: block;
+	margin:0 auto;
 	align:center;
 }
 @font-face
