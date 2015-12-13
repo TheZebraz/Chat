@@ -1,6 +1,6 @@
-<link rel="shortcut icon" href="/favicon.ico" />
-<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../dist/css/bootstrap-social.css" rel="stylesheet">
-<link href="../dist/css/styles.css" rel="stylesheet">
-<link href="../dist/css/socialisons.css" rel="stylesheet">
-<script src="../dist/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="/resources/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap-social.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/styles.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/socialisons.css">
+<script src="/resources/js/bootstrap.min.js"></script>

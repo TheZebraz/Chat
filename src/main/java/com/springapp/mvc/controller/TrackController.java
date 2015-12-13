@@ -30,28 +30,35 @@ public class TrackController {
         return "index";
     }
 
+    @RequestMapping(value = "admin", method = RequestMethod.GET)
+    private String getTracksInfo (Model model){
+        List<Track> tracks = this.trackRepository.listAll();
+        model.addAttribute("tracks", tracks);
+        return "admin";
+    }
+
     @RequestMapping(value = "photo", method = RequestMethod.GET)
-    public String photo(Model model){
+    public String photo(){
         return "photo";
     }
 
     @RequestMapping(value = "music", method = RequestMethod.GET)
-    public String misic(Model model){
+    public String misic(){
         return "music";
     }
 
     @RequestMapping(value = "video", method = RequestMethod.GET)
-    public String video(Model model){
+    public String video(){
         return "video";
     }
 
     @RequestMapping(value = "affiche", method = RequestMethod.GET)
-    public String affiche(Model model){
+    public String affiche(){
         return "affiche";
     }
 
     @RequestMapping(value = "contacts", method = RequestMethod.GET)
-    public String contacts(Model model){
+    public String contacts(){
         return "contacts";
     }
 }

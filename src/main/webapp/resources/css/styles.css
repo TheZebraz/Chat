@@ -1,7 +1,7 @@
 .track {
 	border: 3px solid black;
 	border-radius: 20px;
-	width: 800px; 
+	width: 800px;
 	margin-top: 10px;
 	background: white;
 	text-align: center;
@@ -58,7 +58,7 @@
 	margin:0 auto;
 	border-radius: 20px;
 	margin-top: 100px;
-	width: 500px; 
+	width: 500px;
 	background: white;
 	text-align: center;
 }
@@ -118,7 +118,7 @@
 	font-weight: bold;
 }
 .font-lyrics-style
- {
+{
 	font-size: 20px;
 	font-family:MyFont;
 	color:black;
@@ -136,49 +136,49 @@
 	font-size: 40px;
 	color: black;
 }
- .font-icon:hover {
-    color: #585858; /* Цвет ссылки при наведении на нее курсора мыши */  
-    text-decoration: none; /* Добавляем подчеркивание */
-   }
- .play-icon-style
- {
+.font-icon:hover {
+	color: #585858; /* Цвет ссылки при наведении на нее курсора мыши */
+	text-decoration: none; /* Добавляем подчеркивание */
+}
+.play-icon-style
+{
 	color: black;
- }
-  .play-icon-style:hover
- {
+}
+.play-icon-style:hover
+{
 	color: black;
 	color: #585858;
 	text-decoration: none;
- }
- .addition
- {
+}
+.addition
+{
 	text-align: center;
- }
- .addition-text
- {
+}
+.addition-text
+{
 	font-size: 20px;
 	font-family:MyFont;
 	color:#989898;
- }
- .comment
- {
+}
+.comment
+{
 	text-align: right;
 	float: right;
 	margin-right: 13px;
- }
- .comment-icon-style
- {
+}
+.comment-icon-style
+{
 	color: black;
 	font-size: 35px;
-	
- }
- .comment-icon-style:hover
- {
-	color: #585858; 	
+
+}
+.comment-icon-style:hover
+{
+	color: #585858;
 	text-decoration: none;
- }
- 
- .lyrics-in-center
+}
+
+.lyrics-in-center
 {
 	align:center;
 }
@@ -191,7 +191,7 @@
 @font-face
 {
 	font-family:MyFont;
-    src: url(century-gothic.ttf);
+	src: url(century-gothic.ttf);
 }
 
 	
