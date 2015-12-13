@@ -29,6 +29,9 @@ public class TrackRepository {
     public void removeTrack(Integer id) {
         Track contact = (Track) this.sessionFactory.getCurrentSession().load(Track.class, id);
         if (null != contact) {
+
+
+            //ssss
             this.sessionFactory.getCurrentSession().delete(contact);
         }
     }
