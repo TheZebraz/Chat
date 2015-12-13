@@ -27,7 +27,31 @@ public class TrackController {
         List<Track> tracks = this.trackRepository.listAll();
 
         model.addAttribute("tracks", tracks);
-
         return "index";
+    }
+
+    @RequestMapping(value = "photo", method = RequestMethod.GET)
+    public String photo(Model model){
+        return "photo";
+    }
+
+    @RequestMapping(value = "music", method = RequestMethod.GET)
+    public String misic(Model model){
+        return "music";
+    }
+
+    @RequestMapping(value = "video", method = RequestMethod.GET)
+    public String video(Model model){
+        return "video";
+    }
+
+    @RequestMapping(value = "affiche", method = RequestMethod.GET)
+    public String affiche(Model model){
+        return "affiche";
+    }
+
+    @RequestMapping(value = "contacts", method = RequestMethod.GET)
+    public String contacts(Model model){
+        return "contacts";
     }
 }

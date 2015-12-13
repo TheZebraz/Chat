@@ -1,18 +1,19 @@
+
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <header >
   <nav class="custom-navbar navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="brand-font navbar-brand" href="http://mastihin.by/">mastihin</a>
+        <a class="brand-font navbar-brand" href="/">mastihin</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a class = "navbar-menu-item" href="photo.html">Фото</a></li>
-          <li><a class = "navbar-menu-item" href="video.html">Видео</a></li>
-          <li><a class = "navbar-menu-item" href="affiche.html">Афиша</a></li>
-          <li><a class = "navbar-menu-item" href="music.html">Музыка</a></li>
-          <li><a class = "navbar-menu-item" href="contacts.html">Контакты</a></li>
+          <li><a class = "navbar-menu-item" href="photo">Фото</a></li>
+          <li><a class = "navbar-menu-item" href="video">Видео</a></li>
+          <li><a class = "navbar-menu-item" href="affiche">Афиша</a></li>
+          <li><a class = "navbar-menu-item" href="music">Музыка</a></li>
+          <li><a class = "navbar-menu-item" href="contacts">Контакты</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
