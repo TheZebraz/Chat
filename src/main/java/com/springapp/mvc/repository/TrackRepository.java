@@ -18,7 +18,7 @@ public class TrackRepository {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public void addContact(Track track) {
+    public void addTrack(Track track) {
         this.sessionFactory.getCurrentSession().save(track);
     }
 
@@ -28,10 +28,7 @@ public class TrackRepository {
 
     public void removeTrack(Integer id) {
         Track contact = (Track) this.sessionFactory.getCurrentSession().load(Track.class, id);
-        if (null != contact) {
-
-
-            //ssss
+        if (contact != null) {
             this.sessionFactory.getCurrentSession().delete(contact);
         }
     }
