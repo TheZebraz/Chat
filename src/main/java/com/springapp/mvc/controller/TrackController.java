@@ -72,7 +72,7 @@ public class TrackController {
     @RequestMapping(value = "addTrack", method = RequestMethod.GET)
     public String addTrack(Model model){
         model.addAttribute("track", new Track());
-        return "addTrack";
+        return "redirect:/admin";
     }
 
     @RequestMapping(value = "addTrack", method = RequestMethod.POST)
@@ -80,7 +80,7 @@ public class TrackController {
         this.trackValidator.validate(track, bindingResult);
         if(bindingResult.hasErrors())
         {
-            return "addTrack";
+            return "redirect:/admin";
         }
         this.trackRepository.addTrack(track);
         return "redirect:/admin";

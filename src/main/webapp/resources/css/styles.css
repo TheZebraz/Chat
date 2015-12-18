@@ -30,9 +30,14 @@
 
 .mytable
 {
-	padding-bottom: 70px;
+	padding-bottom: 30px;
 	margin:0 auto;
 	width: 1000px;
+}
+.mypanel
+{
+	margin:0 auto;
+	width: 1050px;
 }
 
 .affiche

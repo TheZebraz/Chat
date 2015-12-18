@@ -30,6 +30,6 @@ public class TrackRepository {
         Track contact = (Track) this.sessionFactory.getCurrentSession().load(Track.class, id);
         if (contact != null) {
             this.sessionFactory.getCurrentSession().delete(contact);
-        }
+    }
     }
 }
