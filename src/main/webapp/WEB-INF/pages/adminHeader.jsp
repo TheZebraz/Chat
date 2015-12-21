@@ -9,7 +9,8 @@
       <div id="navbar" class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a class = "navbar-menu-item" href="contacts">Редактор текстов</a></li>
+          <li><a class = "navbar-menu-item" href="admin">Редактор текстов</a></li>
+            <li><a class = "navbar-menu-item" href="comments">Комментарии</a></li>
          <!-- <li><a class = "navbar-menu-item" href="photo">Фото</a></li>
           <li><a class = "navbar-menu-item" href="video">Видео</a></li>
           <li><a class = "navbar-menu-item" href="affiche">Афиша</a></li>

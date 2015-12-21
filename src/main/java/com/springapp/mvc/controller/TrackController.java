@@ -4,6 +4,7 @@ import com.springapp.mvc.domain.Track;
 import com.springapp.mvc.repository.TrackRepository;
 import com.springapp.mvc.validation.TrackValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -69,13 +70,16 @@ public class TrackController {
         return "contacts";
     }
 
+
     @RequestMapping(value = "addTrack", method = RequestMethod.GET)
+    @PreAuthorize("isAuthenticated()")
     public String addTrack(Model model){
         model.addAttribute("track", new Track());
         return "redirect:/admin";
     }
 
     @RequestMapping(value = "addTrack", method = RequestMethod.POST)
+    @PreAuthorize("isAuthenticated()")
     public String addTrack(@ModelAttribute("track") Track track, BindingResult bindingResult){
         this.trackValidator.validate(track, bindingResult);
         if(bindingResult.hasErrors())
@@ -86,10 +90,32 @@ public class TrackController {
         return "redirect:/admin";
     }
 
+    @RequestMapping(value = "updateTrack", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('admin')")
+    public String updateTrack(Model model){
+        model.addAttribute("track", new Track());
+        return "redirect:/admin";
+    }
+
+    @RequestMapping(value = "updateTrack/{id}", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('admin')")
+    public String updateTrack(@PathVariable Integer id, @ModelAttribute("track") Track track, BindingResult bindingResult){
+        this.trackValidator.validate(track, bindingResult);
+        if(bindingResult.hasErrors())
+        {
+            return "redirect:/admin";
+        }
+        track.setId(id);
+        this.trackRepository.updateTrack(track);
+        return "redirect:/admin";
+    }
+
     @RequestMapping(value = "deleteTrack/{id}", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('admin')")
     public String deleteTrack(@PathVariable Integer id){
         this.trackRepository.removeTrack(id);
 
         return "redirect:/admin";
     }
+
 }

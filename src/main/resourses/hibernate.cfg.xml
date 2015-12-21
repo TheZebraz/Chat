@@ -4,5 +4,6 @@
 <hibernate-configuration>
     <session-factory>
         <mapping class = "com.springapp.mvc.domain.Track"></mapping>
+        <mapping class = "com.springapp.mvc.domain.Comment"></mapping>
     </session-factory>
 </hibernate-configuration>

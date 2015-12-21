@@ -22,6 +22,10 @@ public class TrackRepository {
         this.sessionFactory.getCurrentSession().save(track);
     }
 
+    public void updateTrack(Track track) {
+        this.sessionFactory.getCurrentSession().update(track);
+    }
+
     public List<Track> listAll() {
         return this.sessionFactory.getCurrentSession().createQuery("from Track").list();
     }
