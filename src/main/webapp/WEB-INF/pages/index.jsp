@@ -10,7 +10,7 @@
 
 <%@ include file="header.jsp" %>
 
-<div class="affiche">
+<div class="affiche general-font">
     <span class="font-affiche">Альбом 43%</span>
     <br>
     <br>
@@ -21,21 +21,20 @@
         </span>
 </div>
 
-<div class="lyrics-in-center">
+<div class="lyrics-in-center general-font">
     <c:if test="${!empty tracks}">
         <c:forEach items="${tracks}" var="track">
 
             <div class="track container">
                 <span class="font-lyrics-name">
                     ${track.name}
-                    <a class="glyphicon glyphicon-play play-icon-style" href="musicMp3/iskry.mp3"></a>
+                    <a class="glyphicon glyphicon-play play-icon-style" href="${track.record}"></a>
                 </span><br>
                 <span class="font-lyrics-style">
                   ${track.text}
                   <div class="comment">
-                      <button type="button" class="btn btn-default createCommentButton"  data-toggle="modal" data-target=".commentForm">Комментарий</button>
                       <span id="nameId" hidden>${track.name}</span>
-                      <a class="glyphicon glyphicon-comment comment-icon-style" href=""></a>
+                      <a class="glyphicon glyphicon-comment comment-icon-style createCommentButton"  data-toggle="modal" data-target=".commentForm"></a>
                   </div>
                 </span>
             </div>
@@ -55,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Изменить</button>
+                                <button type="submit" class="btn btn-default">Отправить</button>
                             </div>
                         </div>
                     </form>

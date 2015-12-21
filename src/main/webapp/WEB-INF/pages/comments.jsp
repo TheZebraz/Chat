@@ -14,36 +14,15 @@
 
 <%@ include file="adminHeader.jsp" %>
 
-<div class="table-responsive">
+<div class="table-responsive general-font">
 
-  <div class="affiche">
-    <div class="login-link-container">
-      <sec:authorize access="isAnonymous()">
-        <p>
-          <button type="button" class="btn btn-default" onclick='location.href="/j_spring_security_check"'>Sign In</button>
-        </p>
-      </sec:authorize>
-      <sec:authorize access="isAuthenticated()">
-        <p>
-          <button type="button" class="btn btn-default" onclick='location.href="/j_spring_security_logout"'>Sign Out</button>
-        </p>
-      </sec:authorize>
-      <span class="font-affiche">Комментарии</span>
-      <br>
-    </div>
-
+  <div class="affiche general-font">
+    <span class="font-affiche">Комментарии</span>
+    <br>
     <c:if test = "${!empty comments}">
 
-      <div class="panel panel-default mypanel">
-        <div class="panel-heading ">
-          <sec:authorize access="isAuthenticated()">
-            <%--<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Добавить трек</button>--%>
-            <%--<%@ include file="addTrackForm.jsp" %>--%>
-          </sec:authorize>
 
-        </div>
-        <div class="panel-body">
-          <table class="table mytable">
+          <table class="table mytable general-fon">
 
             <thead>
             <tr>
@@ -65,21 +44,15 @@
                 <td>${comment.commentDate}</td>
                 <sec:authorize access="hasRole('admin')">
                   <td>
-                    <a href="deleteComment/${comment.idcomment}">Удалить</a>
-                    <%--<button type="button" class="btn btn-default image-upd"  data-toggle="modal" data-target=".tmp">Изменить</button>--%>
-                    <%--<span id="trackId" hidden>${track.id}</span>--%>
-                    <%--<span id="nameId" hidden>${track.name}</span>--%>
-                    <%--<span id="textId" hidden>${track.text}</span>--%>
-                    <%--<span id="albumId" hidden>${track.album}</span>--%>
-                    <%--<span id="recordId" hidden>${track.record}</span>--%>
+                    <button type="button" class="btn btn-default" onclick='location.href="deleteComment/${comment.idcomment}"'>Удалить</button>
                   </td>
                 </sec:authorize>
               </tr>
             </c:forEach>
             </tbody>
-          </table></div>
-      </div>
+          </table>
     </c:if>
   </div>
+</div>
 </body>
 </html>

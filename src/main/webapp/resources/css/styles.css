@@ -6,6 +6,7 @@
 	background: white;
 	text-align: center;
 }
+
 .brand-font
 {
 	font-size: 100px;
@@ -109,6 +110,9 @@
 	color: black;
 	font-weight: bold;
 }
+.general-font{
+	font-family:MyFont  !important;
+}
 .CenturyGothic {
 	font-size: 120px;
 	font-family:MyFont;
@@ -198,5 +202,24 @@
 	font-family:MyFont;
 	src: url(century-gothic.ttf);
 }
+.body {
+	font-family: MyFont !important;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #000;
+}
+#outer
+{
+	display: flex;
+	flex-wrap: nowrap;
 
-	
+}
+
+#td_align {
+	/*height: 100%;*/
+	/*vertical-align: middle;*/
+}
+
+#idtext {
+	resize: none;
+}

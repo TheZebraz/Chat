@@ -60,11 +60,6 @@ public class TrackController {
         return "video";
     }
 
-    @RequestMapping(value = "affiche", method = RequestMethod.GET)
-    public String affiche(){
-        return "affiche";
-    }
-
     @RequestMapping(value = "contacts", method = RequestMethod.GET)
     public String contacts(){
         return "contacts";

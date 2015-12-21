@@ -50,6 +50,6 @@ public class CommentController {
     public String addTrack(@PathVariable String name, @ModelAttribute("comment") Comment comment){
         comment.setTrackName(name);
         this.commentRepository.addComment(comment);
-        return "redirect:/admin";
+        return "redirect:/";
     }
 }

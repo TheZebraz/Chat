@@ -20,16 +20,16 @@
         </ol>
         <div class="carousel-inner photo-style">
             <div class="item ">
-                <img src="/photo/andrew.png" alt="First Slide">
+                <img src="http://mastihin.by/photo/DKall.png" alt="First Slide">
             </div>
             <div class="item">
-                <img class="photo-style" src="/photo/dimas.png" alt="Second Slide">
+                <img class="photo-style" src="http://mastihin.by/photo/andrew.png" alt="Second Slide">
             </div>
             <div class="item">
-                <img  src="/photo/graffiti.png" alt="Third Slide">
+                <img  src="http://mastihin.by/photo/dimas.png" alt="Third Slide">
             </div>
             <div class="item active">
-                <img src="/photo/DKall.png" alt="Fourth Slide">
+                <img src="http://mastihin.by/photo/graffiti.png" alt="Fourth Slide">
             </div>
         </div>
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">

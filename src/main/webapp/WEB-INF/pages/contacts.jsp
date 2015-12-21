@@ -10,7 +10,7 @@
 
   <%@ include file="header.jsp" %>
 
-  <div class = "contacts">
+  <div class = "contacts general-font">
     <span class= "contacts-header" >Контакты: </span><br>
     <span class= "contacts-number">+375 33 630 35 94 (MТС) Андрей </span>
     <br>

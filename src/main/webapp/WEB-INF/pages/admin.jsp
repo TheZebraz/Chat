@@ -14,23 +14,11 @@
 
   <%@ include file="adminHeader.jsp" %>
 
-  <div class="table-responsive">
+  <div class="table-responsive general-font">
 
-    <div class="affiche">
-      <div class="login-link-container">
-        <sec:authorize access="isAnonymous()">
-          <p>
-            <button type="button" class="btn btn-default" onclick='location.href="/j_spring_security_check"'>Sign In</button>
-          </p>
-        </sec:authorize>
-        <sec:authorize access="isAuthenticated()">
-        <p>
-          <button type="button" class="btn btn-default" onclick='location.href="/j_spring_security_logout"'>Sign Out</button>
-        </p>
-        </sec:authorize>
+    <div class="affiche general-font">
       <span class="font-affiche">Редактор треков</span>
-        <br>
-    </div>
+      <br>
 
     <c:if test = "${!empty tracks}">
 
@@ -52,7 +40,7 @@
           <th>Альбом</th>
           <th>Запись</th>
           <sec:authorize access="hasRole('admin')">
-            <th>Удалить</th>
+            <th>Управление</th>
           </sec:authorize>
 
         </tr>
@@ -67,15 +55,25 @@
             <td>${track.album}</td>
             <td>${track.record}</td>
             <sec:authorize access="hasRole('admin')">
-                <td>
-                  <a href="deleteTrack/${track.id}">Удалить</a>
-                  <button type="button" class="btn btn-default image-upd"  data-toggle="modal" data-target=".tmp">Изменить</button>
-                  <span id="trackId" hidden>${track.id}</span>
-                  <span id="nameId" hidden>${track.name}</span>
-                  <span id="textId" hidden>${track.text}</span>
-                  <span id="albumId" hidden>${track.album}</span>
-                  <span id="recordId" hidden>${track.record}</span>
-                </td>
+
+              <td id="td_align">
+
+                  <div id="outer">
+                    <button type="button" class="btn btn-default" onclick='location.href="deleteTrack/${track.id}"'>
+                      Удалить
+                    </button>
+                    <button type="button" class="btn btn-default image-upd" data-toggle="modal" data-target=".tmp">
+                      Изменить
+                    </button>
+                    <span id="trackId" hidden>${track.id}</span>
+                    <span id="nameId" hidden>${track.name}</span>
+                    <span id="textId" hidden>${track.text}</span>
+                    <span id="albumId" hidden>${track.album}</span>
+                    <span id="recordId" hidden>${track.record}</span>
+                  </div>
+
+              </td>
+
             </sec:authorize>
           </tr>
         </c:forEach>

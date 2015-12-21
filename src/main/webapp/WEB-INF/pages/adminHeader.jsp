@@ -9,15 +9,25 @@
       <div id="navbar" class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a class = "navbar-menu-item" href="admin">Редактор текстов</a></li>
+          <li><a class = "navbar-menu-item" href="admin">Редактор треков</a></li>
             <li><a class = "navbar-menu-item" href="comments">Комментарии</a></li>
-         <!-- <li><a class = "navbar-menu-item" href="photo">Фото</a></li>
-          <li><a class = "navbar-menu-item" href="video">Видео</a></li>
-          <li><a class = "navbar-menu-item" href="affiche">Афиша</a></li>
-          <li><a class = "navbar-menu-item" href="music">Музыка</a></li>
-          -->
-
+          <li><a class = "navbar-menu-item" href="concerts">Концерты</a></li>
         </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <div class="login-link-container">
+              <sec:authorize access="isAnonymous()">
+                  <p>
+                      <button type="button" class="btn btn-default general-font" onclick='location.href="/j_spring_security_check"'>Войти</button>
+                  </p>
+              </sec:authorize>
+              <sec:authorize access="isAuthenticated()">
+                  <p>
+                      <button type="button" class="btn btn-default general-font" onclick='location.href="/j_spring_security_logout"'>Выйти</button>
+                  </p>
+              </sec:authorize>
+
+          </div>
+      </ul>
       </div>
     </div>
   </nav>

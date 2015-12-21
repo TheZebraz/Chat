@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,22 +11,29 @@
 <body>
 
 <%@ include file="header.jsp" %>
+<br><br>
+<c:if test = "${!empty concertslist}">
 
-<table class="table mytable">
-  <tbody>
-  <tr>
-    <td class="navbar-menu-item">07.06</td>
-    <td class="navbar-menu-item"><a href="https://vk.com/eveningliverock">Концерт в клубе Граффити<a></td>
-  </tr>
-  <tr >
-    <td class="navbar-menu-item">26.06</td>
-    <td class="navbar-menu-item"><a href="https://vk.com/artjam3">Акустическое выступление на ART JAM<a></td>
-  </tr>
-  <tr>
-    <td class="navbar-menu-item">21.07</td>
-    <td class="navbar-menu-item"><a href="https://vk.com/openpoetrymic21">Открытый поэтический микрофон в баре "ДК"<a></td>
-  </tr>
-  </tbody>
-</table>
+
+      <table class="table mytable general-font">
+
+        <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Информация</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        <c:forEach items = "${concertslist}" var = "concerts">
+          <tr>
+            <td>${concerts.date}</td>
+            <td>${concerts.info}</td>
+          </tr>
+        </c:forEach>
+        </tbody>
+      </table>
+</c:if>
 </body>
 </html>
