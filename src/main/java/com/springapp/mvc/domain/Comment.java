@@ -1,6 +1,7 @@
 package com.springapp.mvc.domain;
 
 import javax.persistence.*;
+import java.sql.Time;
 
 @Entity
 @Table(name = "comment")
@@ -15,7 +16,7 @@ public class Comment {
 
     @Column(name = "commentDate")
     @GeneratedValue
-    private String commentDate;
+    private java.util.Date commentDate;
 
     @Column(name = "trackName")
     private String trackName;
@@ -36,11 +37,11 @@ public class Comment {
         this.text = text;
     }
 
-    public String getCommentDate() {
+    public java.util.Date getCommentDate() {
         return commentDate;
     }
 
-    public void setCommentDate(String commentDate) {
+    public void setCommentDate(java.util.Date commentDate) {
         this.commentDate = commentDate;
     }
 

@@ -42,7 +42,7 @@ public class CommentController {
     @PreAuthorize("isAuthenticated()")
     public String createComment(Model model){
         model.addAttribute("comment", new Comment());
-        return "redirect:/admin";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "createComment/{name}", method = RequestMethod.POST)
